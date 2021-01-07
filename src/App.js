@@ -4,12 +4,15 @@ import './App.css';
 function App() {
 
   const STARTING_TIME = 15;
+
   const textAreaRef = useRef(null);
 
   const [text, setText] = useState("");
   const [words, setWords] = useState(0);
+  const [startingTime, setStartingTime] = useState(15);
   const [remainingTime, setRemainingTime] = useState(STARTING_TIME);
   const [isTimeRunning, setIsTimeRunning] = useState(false);
+  
 
   const changeText = (event) => {
     const {value} = event.target;
@@ -47,6 +50,7 @@ function App() {
     setIsTimeRunning(false)
     wordsCounter(text);
   }
+
  
   return (
     <div>
